@@ -12,7 +12,7 @@ export default person;
 // utility.js
 // Here we export specific data from our utility.js. In this case when we import the data elsewhere, we
 // have to use these exact names inside {}. These are known as named exports. Since neither of these is the
-// default export, we have to specify what we are importing in the app
+// default export, we have to specify what we are importing in the app.js
 export const clean = () => {};
 export const baseData = 10;
 
