@@ -1,21 +1,19 @@
 class Human {
-  constructor() {
-    this.gender = "female";
-  }
+  // In this syntax, the constructor is called automatically and we don't have to include the super() in
+  // the child class
+  gender = "female";
 
-  printGender() {
+  // in ES6 we use arrow functions inside classes to avoid any issues with the 'this' keyword
+  printGender = () => {
     console.log(this.gender);
-  }
+  };
 }
 
+// ------------------------------------------------------------------------------------------------------
+
 class Person extends Human {
-  constructor() {
-    // If you extend from another class, you have to include the super() inside your constructor
-    // in order to call the constructor in the parent class and set it up correctly
-    super();
-    this.name = "Max";
-    this.gender = "male";
-  }
+  name = "Max";
+  gender = "male";
 
   printMyName() {
     console.log(this.name);
@@ -28,3 +26,5 @@ const person = new Person();
 // Calling the methods from Human and Person
 person.printGender();
 person.printMyName();
+
+// ------------------------------------------------------------------------------------------------------
